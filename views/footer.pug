@@ -1,0 +1,28 @@
+.d-flex.flex-column.h-100
+  // FOOTER
+  footer.w-100.py-4.flex-shrink-0.text-dark
+    .container.py-4.text-center.text-md-left
+      .row.gy-4.gx-5
+        //.col-lg-4.col-md-6
+          .logo-box  
+            img(src="/images/logo.png", alt="")
+        .col-lg-6.col-md-6
+          h5.text-dark.mb-3 Quick links
+          ul.list-unstyled.text-muted
+            li
+              a(href='#') Home
+            li
+              a(href='#') About
+            li
+              a(href='#') Get started
+            li
+              a(href='#') FAQ
+        .col-lg-6.col-md-6
+          h5.text-dark.mb-3 Newsletter
+          p.small.text-muted
+            | Subscribe To Our Newsletter
+          form(action='#')
+            .input-group.mb-3
+              input.form-control(type='text' placeholder="Email Address" aria-label="Email Address" aria-describedby='button-addon2')
+              button#button-addon2.btn.btn-primary.primary-btn(type='button')
+                i.fas.fa-paper-plane

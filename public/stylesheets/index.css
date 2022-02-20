@@ -1,0 +1,278 @@
+.hero-wrap {
+    width: 100%;
+    height: 100vh;
+    position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.hero-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .8;
+    background: #f200ff;
+    background: -moz-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #f200ff), color-stop(100%, #ffba42));
+    background: -webkit-linear-gradient(
+45deg
+, #f200ff 0%, #ffba42 100%);
+    background: -o-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: -ms-linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+    background: linear-gradient(
+45deg
+, #f200ff 0%, #ffba42 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f200ff', endColorstr='#ffba42', GradientType=1 );
+}
+
+.slider-text h2 {
+    font-size: 3vw;
+    color: #fff;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.slider-text h1 {
+    font-size: 5vw;
+    color: #fff;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.slider-text .subheading {
+    font-size: 18px;
+    color: #fff;
+    font-family: "Poppins",Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.hero-wrap .container {
+    position: relative;
+    z-index: 10;
+}
+
+.mouse-icon {
+    height: 80px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    bottom: 0;
+}
+
+.mouse-icon:hover {
+    color: inherit;
+}
+
+.posts-wrap {
+    position: relative;
+}
+
+.posts-wrap li {
+    list-style-type: none;
+}
+
+.posts-wrap .col-4 .col-8 {
+    overflow: hidden;
+}
+
+.posts-wrap .container-fluid {
+    box-shadow: 0 0 5px #8080807e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.post-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-wrap .text-truncate.title {
+    font-weight: bold;
+}
+
+.post-wrap a {
+    color: unset;
+}
+
+.posts-wrap a:hover {
+    color: #05050571 !important;
+    transition: color 100ms linear;
+}
+
+.share-post a {
+    color: black;
+    background: #ef6c26bd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.share-post p {
+    padding: 15px;
+}
+
+.share-post i {
+    width: 100%;
+    font-size: larger;
+}
+
+.share-post .container {
+    width: 85px;
+}
+
+.logo-box {
+    width: 200px;
+}
+
+.blog-wrap {
+    height: 100%;
+}
+
+.nav-box {
+    padding-top: 50px;
+}
+
+.nav-box a {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-box a:hover {
+    color: inherit;
+}
+
+.main-post img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.main-post article {
+    font-size: large;
+}
+
+.post {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+article.post {
+    max-height: 25px;
+}
+
+.lead.post {
+    max-height: 70px;
+    max-width: 300px;
+}
+
+.blog ul {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    cursor: grab;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+}
+
+.blog ul::-webkit-scrollbar {
+    display: none;
+}
+
+.blog li {
+    list-style-type: none;
+}
+
+.blog ul.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+.post img {
+    display: none !important;
+}
+
+.tag {
+    text-transform: uppercase;
+}
+
+.title {
+    text-transform: capitalize;
+}
+
+#error {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    left: 0;    
+    overflow: hidden;
+}
+
+.error-bg {
+    background: #000000a1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+}
+
+#error main {
+    border-radius: 10px;
+}
+
+#error .close i {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 30px;
+}
+
+.error-text {
+    background: #dbadad;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid #d04b62;
+    color: #b31a35;
+    font-weight: 00;
+}
+
+.invalid-tox {
+    border-color: #dc3545 !important;    
+}
+
+.valid-tox {
+    border-color: #198754 !important;
+}
+
+.tox {
+    border-radius: .25rem !important;
+}
+
+label {
+    text-transform: capitalize;
+}

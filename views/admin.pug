@@ -1,0 +1,60 @@
+extends layout
+
+block content
+	include header
+	//.hero-wrap(style="background-image: url('/images/living-room.jpg');background-position: 50% 0%;")
+		.overlay
+		.container.py-5.text-white
+			.row.slider-text.align-items-center.justify-content-start(style='height: 400px;')
+				h2.subheading.pt-5 Hello! Welcome to
+				h1.mb-4.mb-md-0 Oprofinder blog
+				.row
+					.col-md-7
+					.mouse
+						a.mouse-icon(href='#posts')
+							i.lni.lni-arrow-down.floating	
+	.container-fluid.pt-5.mt-5.p-md-5
+		//.error-box
+			if (error)
+				.error
+					h2 #{message}
+		#error.d-none
+			.error-bg
+			.close
+				i.fa.fa-times.text-white
+		.container 
+			.row 
+				.col-12.px-4.pb-0.pt-4
+					form#imageForm
+						.mb-3
+							label post thumbnail image:
+							br
+							.input-group
+								input( type="file" name="myfile" id="myfile" onchange="fileValidation1()").form-control
+								.img-box
+								.stat.position-absolute 
+								.form-text.text-left.col-12 Max upload size is 4mb
+								#size.form-text.text-left.container-fluid.px-0
+				.col-12.px-4.pt-0
+					form#addPostForm(novalidate).needs-validation
+						.row
+							.col-12.col-md-4.mb-3
+								label(for="title") title:
+								input(required type="text", name="title")#title.form-control
+							.col-12.col-md-4.mb-3
+								label(for="tag") tag:
+								input(required type="text", name="tag")#tag.form-control
+							.col-12.col-md-4.mb-3 
+								label(for="") latest ?:
+								br
+								select#latest(name="latest" disabled).form-control
+									option(value="") ---
+									option(value="yes") Yes
+									option(value="no") No
+							.mb-3#post
+								label(for="postTextarea") post:
+								textarea(required name="post", cols="30", rows="10")#postTextarea.form-control
+							.mb-3.col-12.text-center
+								button(type="submit").primary-btn submit post
+
+	include footer

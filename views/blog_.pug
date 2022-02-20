@@ -1,0 +1,93 @@
+extends layout
+
+block content
+    link(rel="stylesheet", href="/stylesheets/blog.css")
+    include header
+    .container.py-5.mt-5
+        .nav-scroller.py-1.mb-2.d-none
+            nav.nav.d-flex.justify-content-between
+                a.p-2.link-secondary(href='#') World
+                a.p-2.link-secondary(href='#') U.S.
+                a.p-2.link-secondary(href='#') Technology
+                a.p-2.link-secondary(href='#') Design
+                a.p-2.link-secondary(href='#') Culture
+                a.p-2.link-secondary(href='#') Business
+                a.p-2.link-secondary(href='#') Politics
+                a.p-2.link-secondary(href='#') Opinion
+                a.p-2.link-secondary(href='#') Science
+                a.p-2.link-secondary(href='#') Health
+                a.p-2.link-secondary(href='#') Style
+                a.p-2.link-secondary(href='#') Travel
+    .container 
+        main.container.blog
+            h2.py-2 Recent Post
+            .p-4.p-md-5.mb-4.text-white.rounded.primary-bg
+                .col-12.px-0
+                    strong.d-inline-block.mb-2.tag #{latest_post[0].tag}
+                    h1.display-4.fst-italic.title #{latest_post[0].title}
+                    .txt-truncate.post.py-1!= latest_post[0].post
+                    .d-inline-block!= latest_post[0].date
+                    p.lead.mb-0
+                        a.text-white.fw-bold(href=`/blog/`+latest_post[0]._id) Continue reading...
+            .container.px-0
+                ul.mb-2.px-0.scroller
+                    each post in posts
+                        li.col-8.col-md-6.mr-4
+                            .row.g-0.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+                                .col-8.p-4.d-flex.flex-column.position-static
+                                    strong.d-inline-block.mb-2.text-primary.tag= post.tag
+                                    h3.mb-0.title.txt-truncate-card-title.pb-2= post.title
+                                    .mb-1.text-muted.pb-3= post.date
+                                    //p.card-text.mb-auto.txt-truncate-card
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content.
+                                    a.stretched-link(href=`/blog/`+post._id) Continue reading
+                                .col-4.px-0.d-lg-block
+                                    img(src="/images/coming-soon.jpg", alt="", style="height: 100%;object-fit: cover")
+                        //.col-md-6
+                            .row.g-0.border.rounded.overflow-hidden.flex-md-row.mb-4.shadow-sm.h-md-250.position-relative
+                                .col.p-4.d-flex.flex-column.position-static
+                                    strong.d-inline-block.mb-2.text-success Design
+                                    h3.mb-0 Post title
+                                    .mb-1.text-muted Nov 11
+                                    p.mb-auto
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content.
+                                    a.stretched-link(href='#') Continue reading
+                                .col-auto.d-none.d-lg-block
+                                    svg.bd-placeholder-img(width='200' height='250' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Thumbnail' preserveaspectratio='xMidYMid slice' focusable='false')
+                                        title Placeholder
+                                        rect(width='100%' height='100%' fill='#ef6d26')
+                                        text(x='50%' y='50%' fill='#eceeef' dy='.3em') Thumbnail
+            .row.g-5
+                .col-md-8
+                    h3.pb-4.mb-4.fst-italic.border-bottom
+                        | Recent Post
+                    article.blog-post
+                        h2.blog-post-title.title.mb-3 #{latest_post[0].title}
+                        .py-2
+                            span.blog-post-meta!= latest_post[0].time
+                            span.px-1 -
+                            span.blog-post-meta!= latest_post[0].date
+                        .blog-post-meta!= latest_post[0].post
+                .col-md-4
+                    .position-sticky(style='top: 6rem;')
+                        .p-4.mb-3.bg-light.rounded
+                            h4.fst-italic About
+                            p.mb-0
+                                | Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.
+                        .p-4
+                        h4.fst-italic Archives
+                        ol.list-unstyled.mb-0
+                            li
+                                a(href='#') January 2022
+                            li
+                                a(href='#') February 2022
+                        .p-4
+                        h4.fst-italic Elsewhere
+                        ol.list-unstyled                            
+                            li
+                                a(href='#') Twitter
+                            li
+                                a(href='#') Facebook
+                            li
+                                a(href='#') Instagram
+    include footer

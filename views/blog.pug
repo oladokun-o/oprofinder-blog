@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	include header
+	.hero-wrap(style="background-image: url('/images/living-room.jpg');background-position: 50% 0%;")
+		.overlay
+		.container.py-5.text-white
+			.row.slider-text.align-items-center.justify-content-start(style='height: 400px;')
+				.col-md-12.pt-5
+					//h2.pt-5.fw-1 #{post_title}
+					h1.mb-4.mb-md-0.pt-5 #{post_title}
+					.d-flex.nav-box
+						a(href="/") Home 
+						| &#8811;
+						a(href="/Blog") Blog 
+						| &#8811;
+						a.text-muted Article
+
+				.row
+					.col-md-7
+					.mouse
+						a.mouse-icon(href='#post')
+							i.lni.lni-arrow-down.floating
+							span.fs-4 Read more
+	.container-fluid.main#post.px-md-5
+		.container-fluid.blog-wrap.px-md-5
+			.row
+				.main-post.col-8.border.border-dark
+					.col-12.pb-4
+						img(src="/images/coming-soon.jpg", alt="")
+					//.col-12 
+						h1= post_title 
+					.col-12.pb-4
+						article!= post_body
+				.recent-posts.col-4.border.border-dark

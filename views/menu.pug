@@ -1,0 +1,82 @@
+block content
+	.Closepanel.container-fluid#CloseMenu(onclick="Closemypanel()").hide.d-md-none.d-xl-none
+	#HiddenPanel.hidden-panel.d-lg-none.d-md-none.d-xl-none
+		.hiddenpanel-bg
+			span.hidden-panel-close(data-js='hidden-panel-close')
+				i.lni.lni-close
+			.hidden-panel-content.p-0
+				.pl-3.pr-4.pb-0.pt-4
+					.col-6.col-md-2.col-lg-2.col-xl-2.pt-lg-3.pt-md-3.pt-xl-3.p-0
+						a(href="/")
+							img.brand-logo-img(src="/images/OHE-Logo.png", alt="")
+				ul.mt-4.index-menu.text-left.menu-item
+					a(href='/how-it-works') 
+						li.text-left.p-4.pl-md-5.pl-4
+							i.lni.lni-construction.pr-3
+							span how it works
+					a(href='/jobs') 
+						li.text-left.p-4.pl-md-5.pl-4
+							i.lni.lni-list.pr-3
+							span categories
+					a(href='/expatriates')
+						li.text-left.p-4.pl-md-5.pl-4
+							i.fa.fa-users(aria-hidden='true')
+							span.pl-3 Expatriates (Foreigner) corner
+					a(href='/questions')
+						li.text-left.p-4.pl-md-5.pl-4
+							img(src="images/question-mark.png", alt="?" style="width: 20px;")
+							span.pl-3 General Questions                                   
+					a(href='/contact') 
+						li.text-left.p-4.pl-md-5.pl-4
+							i.lni.lni-phone.pr-3
+							span contact
+					a(href='/signup').signup-btn
+						li.text-left.py-4.px-md-5.px-4
+							i.px-3
+							span signup
+					a(href='/login').login-anchor
+						li.text-left.py-4.px-md-5.px-4
+							i.px-3
+							span login                    
+	.main-header.py-3.px-4.pb-.py-md-2
+		.col-6.col-md-2.col-lg-2.col-xl-2.pt-lg-3.pt-md-3.pt-xl-3.pl-0.pb-2
+			a(href="/")
+				img.brand-logo-img(src="/images/OHE-Logo.png", alt="")
+		.col-md-10.col-lg-10.col-xl-10.d-none.d-md-block.d-lg-block.d-xl-block.p-0.text-center
+			ul.mt-2.large-menu
+				a(href='/how-it-works')
+					li.text-center.p-2.d-md-none.d-lg-block
+						//i.lni.lni-construction.pr-2
+						span how it works            
+				a(href='/jobs')
+					li.text-center.p-2  
+						//i.lni.lni-list.pr-2
+						span categories
+				a(href='/expatriates')
+					li.text-center.p-2
+						//i.fa.fa-users(aria-hidden='true')
+						span.pl-3 Expatriates (Foreigner) corner
+				a(href='/questions')
+					li.text-center.p-2.d-md-none.d-lg-block
+						//img(src="images/question-mark.png", alt="?" style="width: 20px;")
+						span.pl-2 General Questions 
+				a(href='/contact')
+					li.text-center.p-2.d-md-none
+						//i.lni.lni-phone.pr-2
+						span contact       				
+				a(href='/signup').signup-btn
+					li.text-center.p-2.px-4
+						span signup
+				a(href='/login').login-anchor
+					li.text-center.p-3.mt-5.login.mt-lg-0.mt-md-0.mt-xl-0             
+						span login
+				.back-to-dashboard(title="dashboard").p-0.pr-2.hide
+					.user-avatar.-small.-initial.p-0.-online-bubble
+						i.lni.lni-user
+		.col-6.d-lg-none.d-md-none.d-xl-none.d-lg-none.pt-3
+			.back-to-dashboard.back-sm(title="dashboard").d-md-none.p-0.mt-1.pr-2.hide
+				.user-avatar.-small.-initial.p-0.-online-bubble.back-to-dashboard-sm-avatar
+					i.lni.lni-user
+		.menu-btn.col-1.text-right#MenuIcon.py-0.px-3.d-lg-none.d-md-none.d-xl-none.d-lg-none
+			button(type="button" data-js='menu-toggle').p-0.mb-2
+				i.lni.lni-menu

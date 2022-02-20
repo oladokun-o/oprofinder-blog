@@ -1,0 +1,47 @@
+extends layout
+
+block content
+	include header
+	.hero-wrap(style="background-image: url('/images/living-room.jpg');background-position: 50% 0%;")
+		.overlay
+		.container.py-5.text-white
+			.row.slider-text.align-items-center.justify-content-start(style='height: 400px;')
+				.col-md-12.pt-5
+					h2.pt-5.fw-1 Hello! Welcome to
+					h1.mb-4.mb-md-0 Oprofinder blog
+				.row
+					.col-md-7
+					.mouse
+						a.mouse-icon(href='#posts')
+							i.lni.lni-arrow-down.floating
+	.container-fluid.py-5.mt-4
+		.posts-wrap.p-md-4.px-md-5#posts
+			ul
+			each post in posts
+				li.py-3
+					.container-fluid.post-wrap.p-0.m-0
+						.row
+							.col-4.p-0
+								a(href=`/blog/`+post._id)
+									img(src="/images/coming-soon.jpg", alt="")
+							.col-8.py-md-5.px-md-2.px-lg-4.py-2.d-flex.align-items-center-justify-content-start.px-0.px-md-2
+								.col-12.col-md-8
+									a(href=`/blog/`+post._id)
+										.p-0.m-0
+											p.display-4.m-0.d-inline-block.text-truncate.title
+												strong!= post.title
+										article.d-inline-block.text-truncate.m-0.post!= post.post
+									p.text-muted.py-lg-3 11/13/2019
+								.col-md-4.d-none.d-md-block.p-0
+									.share-post.text-center.d-flex.justify-content-center.align-items-center
+										.container
+											p
+												a(href="#")
+													i.fab.fa-twitter
+											p
+												a(href="#")
+													i.fab.fa-facebook-f
+											p
+												a(href="#")
+													i.fab.fa-instagram
+	include footer
