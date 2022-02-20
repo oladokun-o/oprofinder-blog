@@ -4,7 +4,7 @@
   "description": "oprofinder official blog site",
   "main": "server/index.js",
   "scripts": {
-    "start server": "node server/index.js",
+    "start": "node server/index.js",
     "start dev server": "nodemon server/index.js"
   },
   "repository": {
